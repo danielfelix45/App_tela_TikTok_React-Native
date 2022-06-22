@@ -5,12 +5,15 @@ import EntypoIcons from 'react-native-vector-icons/Entypo';
 import FeatherIcons from 'react-native-vector-icons/Feather';
 import AntIcons from 'react-native-vector-icons/AntDesign';
 
-import HomeScreen from './screens/Home';
-import Button from './components/Button'
+import Home from '../pages/Home';
+import Discover from '../pages/Discover';
+import Inbox from '../pages/Inbox';
+import Profile from '../pages/Profile';
+import Button from '../components/Button'
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigation() {
+export default function Routes() {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -23,39 +26,45 @@ export default function Navigation() {
         }}
       >
         <Tab.Screen
-          name='Home'
-          component={HomeScreen}
+          name='Início'
+          component={Home}
           options={{
-            tabBarIcon: ({ size, color }) => <EntypoIcons name='home' size={size} color={color} />
+            tabBarIcon: ({ size, color }) => <EntypoIcons name='home' size={size} color={color} />,
+            headerShown: false
           }}
+
         />
         <Tab.Screen
-          name='Discover'
-          component={HomeScreen}
+          name='Descobrir'
+          component={Discover}
           options={{
-            tabBarIcon: ({ size, color }) => <FeatherIcons name='search' size={size} color={color} />
+            tabBarIcon: ({ size, color }) => <FeatherIcons name='search' size={size} color={color} />,
+            headerShown: false
           }}
         />
         <Tab.Screen
           name='New'
-          component={HomeScreen}
+          component={Home}
           options={{
             title: '',
-            tabBarIcon: ({ size, color }) => (<Button />)
+            tabBarIcon: () => (<Button />),
+            headerShown: false
           }}
         />
         <Tab.Screen
-          name='Inbox'
-          component={HomeScreen}
+          name='Caixa de entrada'
+          component={Inbox}
           options={{
-            tabBarIcon: ({ size, color }) => <EntypoIcons name='chat' size={size} color={color} />
+            tabBarIcon: ({ size, color }) => <EntypoIcons name='chat' size={size} color={color} />,
+            headerShown: false
           }}
         />
         <Tab.Screen
-          name='Profile'
-          component={HomeScreen}
+          name='Eu'
+          component={Profile}
           options={{
-            tabBarIcon: ({ size, color }) => <AntIcons name='user' size={size} color={color} />
+            tabBarIcon: ({ size, color }) => <AntIcons name='user' size={size} color={color} />,
+            headerShown: false
           }}
         />
       </Tab.Navigator>
