@@ -6,6 +6,10 @@ import {
   AreaTextHome,
   TextLeft,
   TextRight,
+  AreaLeft,
+  TextUser,
+  TextTitle,
+  TextMusic,
   AreaUser,
   ImgUser,
   AreaLike,
@@ -17,8 +21,7 @@ import {
   AreaShare,
   ImgShare,
   TextShare,
-  TextUser,
-  TextTitle
+
 } from './styles';
 
 import ButtonUser from '../../components/ButtonUser';
@@ -33,8 +36,11 @@ export default function Home() {
           <TextRight>Para você</TextRight>
         </AreaTextHome>
 
-        <TextUser>@daniel_felix</TextUser>
-        <TextTitle>Lindo por do sol❤️ #pordosol #natureza</TextTitle>
+        <AreaLeft>
+          <TextUser>@daniel_felix</TextUser>
+          <TextTitle>Lindo por do sol❤️ #pordosol #natureza</TextTitle>
+          <TextMusic>♫ som original - status_musica9</TextMusic>
+        </AreaLeft>
 
         <AreaUser>
           <ImgUser source={require('../../assets/me.jpeg')} />

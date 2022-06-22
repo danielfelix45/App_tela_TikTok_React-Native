@@ -28,7 +28,6 @@ color: #fff;
 export const AreaUser = styled.View`
 width: 75px;
 height: 80px;
-flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-left: 340px;
@@ -61,7 +60,6 @@ height: 50px;
 export const TextLike = styled.Text`
 font-size: 15px;
 color: #fff;
-margin-right: 8px;
 `;
 
 export const AreaComments = styled.View`
@@ -83,7 +81,6 @@ height: 50px;
 export const TextComments = styled.Text`
 font-size: 15px;
 color: #fff;
-margin-right: 8px;
 `;
 
 export const AreaShare = styled.View`
@@ -105,16 +102,29 @@ height: 50px;
 export const TextShare = styled.Text`
 font-size: 15px;
 color: #fff;
-margin-right: 8px;
+`;
+
+export const AreaLeft = styled.View`
+width: 300px;
+position: absolute;
+margin-top: 430px;
+margin-left: 8px;
 `;
 
 export const TextUser = styled.Text`
-font-size: 15px;
+font-size: 18px;
 font-weight: bold;
 color: #fff;
+margin-bottom: 8px;
 `;
 
 export const TextTitle = styled.Text`
-font-size: 15px;
+font-size: 18px;
+color: #fff;
+margin-bottom: 10px;
+`;
+
+export const TextMusic = styled.Text`
+font-size: 18px;
 color: #fff;
 `;

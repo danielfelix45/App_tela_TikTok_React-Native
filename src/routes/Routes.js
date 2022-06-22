@@ -9,6 +9,7 @@ import Home from '../pages/Home';
 import Discover from '../pages/Discover';
 import Inbox from '../pages/Inbox';
 import Profile from '../pages/Profile';
+import New from '../pages/New';
 import Button from '../components/Button'
 
 const Tab = createBottomTabNavigator();
@@ -44,7 +45,7 @@ export default function Routes() {
         />
         <Tab.Screen
           name='New'
-          component={Home}
+          component={New}
           options={{
             title: '',
             tabBarIcon: () => (<Button />),
